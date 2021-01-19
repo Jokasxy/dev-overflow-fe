@@ -1,0 +1,100 @@
+.nav-container {
+  min-width: 1920px;
+  margin: auto;
+  padding: 0;
+}
+
+.navbar {
+  align-items: start;
+  justify-content: space-around;
+  min-height: 288px;
+  background-image: url("../img/wave\ \(2\).png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f1f3ff;
+}
+
+.navbar2 {
+  align-items: start;
+  justify-content: space-around;
+  min-height: 540px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f1f3ff;
+}
+
+.STUDYING {
+  background-image: url("../img/wave\ \(3\).svg");
+}
+
+.FUN {
+  background-image: url("../img/wave-orange.svg");
+
+  .login-about {
+    display: inline-flex;
+    img:hover {
+      background: #5562d3;
+      transition: 0.1s ease-in;
+    }
+  }
+}
+
+.FEEDBACK {
+  background-image: url("../img/WaveHeader.svg");
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 40px;
+  opacity: 0.7;
+  font-weight: 100;
+  background-color: inherit;
+}
+
+.login-about {
+  display: inline-flex;
+  img:hover {
+    background: #ffb56e;
+    transition: 0.1s ease-in;
+    border-radius: 20px;
+  }
+}
+.description {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.808);
+  font-size: 50px;
+  margin-top: 2rem;
+  text-align: center;
+  overflow: hidden;
+  p {
+    margin: 0;
+  }
+}
+
+.category {
+  color: white;
+  font-size: 35px;
+  font-weight: 100;
+}
+
+.arrow-back {
+  height: 20px;
+  width: 20px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+.return {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-quiz-title {
+  color: #ffffff;
+  font-size: 55px;
+  margin-top: 30px;
+}

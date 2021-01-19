@@ -1,0 +1,135 @@
+.col-box {
+  max-width: 400px;
+  padding: 0;
+  &:hover {
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+  }
+}
+.quiz-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 70px;
+  height: 570px;
+  max-width: 400px;
+  padding: 0;
+  img {
+    object-fit: cover;
+  }
+  left: 50;
+}
+.quiz-card-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 70px;
+  height: 700px;
+  max-width: 500px;
+  padding: 0;
+  background: linear-gradient(150deg, #7381ff99 0%, #83acff99 100%);
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.quiz-title-active {
+  font-size: 40px;
+  //debug: bold;
+  color: #4251d1;
+  font-weight: 300;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.quiz-title {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.quiz-title-fun {
+  color: #db8838;
+  font-weight: 300;
+}
+
+.quiz-title-study {
+  color: #4251d1;
+  font-weight: 300;
+}
+
+.quiz-card-body-active {
+  padding: 0;
+  border-radius: 70px;
+  height: 700px;
+  max-width: 500px;
+}
+
+.quiz-card-body {
+  padding: 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.04), 0 0 30px rgba(0, 0, 0, 0.04);
+  border-radius: 70px;
+  background: #ffffff;
+  height: 570px;
+  max-width: 400px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.quiz-image-active {
+  margin-top: 10%;
+  height: 380px;
+  width: 380px;
+  border: solid 15px #b5c0fe;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 #7381ff99, 0 3px 5px 0 #7381ff99;
+}
+
+.quiz-image {
+  margin-top: 10%;
+  height: 305px;
+  width: 305px;
+  border-radius: 50%;
+  box-shadow: 0 15px 15px 0 #7381ff33, 0 15px 15px 0 #7381ff33;
+}
+
+.button-solve-active {
+  width: 50%;
+  font-weight: 200;
+  color: #4251d1;
+  font-size: 30px;
+  opacity: 0.9;
+  border-radius: 70px;
+  margin-top: 50px;
+  padding: 28px 59px 25px 59px;
+}
+
+.button-solve {
+  width: 50%;
+  font-weight: 200;
+  font-size: 23px;
+  opacity: 0.9;
+  border-radius: 70px;
+  padding: 23px 52px 21px 48px;
+
+  margin-top: 70px;
+  margin-bottom: 70px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button-solve-fun {
+  color: white;
+  background-color: #ffb56e;
+}
+
+.button-solve-study {
+  color: white;
+  background-color: #7e88ff;
+}
+
+.link-disabled {
+  pointer-events: none;
+}

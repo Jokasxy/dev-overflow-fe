@@ -1,0 +1,45 @@
+.container {
+  min-width: 1920px;
+  background-color: #f1f3ff;
+  min-height: fit-content;
+}
+.category-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 652px;
+
+  h2 {
+    color: #5562d3;
+    font-size: 45px;
+    font-weight: 400;
+  }
+  img {
+    width: 638px;
+    height: 440px;
+  }
+  .arrow {
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    &:hover {
+      background: #ffb56e;
+      transition: ease 1s;
+      border-radius: 100px;
+    }
+  }
+  .white-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 60px;
+    max-width: 450px;
+  }
+}
+
+.fun-quiz {
+  height: 940px;
+}

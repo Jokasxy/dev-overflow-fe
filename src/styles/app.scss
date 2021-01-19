@@ -1,0 +1,20 @@
+//importing bootstrap
+@import "~bootstrap/scss/bootstrap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+body {
+  background-color: white;
+}
+
+//importing other scss files
+@import "./category";
+@import "./navbar";
+@import "./quizlist";
+@import "./quizitem";
+@import "./question";
+@import "./feedback";
