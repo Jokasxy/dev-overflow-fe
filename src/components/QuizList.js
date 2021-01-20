@@ -63,7 +63,7 @@ const QuizList = (props) => {
 
   const content = filtered.map((item, i) => {
     return (
-      <>
+      <React.Fragment key={item.id}>
         <QuizItem
           onClick={() => onClick(i)}
           item={item}
@@ -74,7 +74,7 @@ const QuizList = (props) => {
           name={item.name}
           image={item.image}
         />
-      </>
+      </React.Fragment>
     );
   });
 

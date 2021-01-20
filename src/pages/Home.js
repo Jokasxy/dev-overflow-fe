@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animation.js";
 
 const Home = () => {
+  localStorage.setItem("reloaded", "false");
   return (
     <motion.div
       variants={pageAnimation}

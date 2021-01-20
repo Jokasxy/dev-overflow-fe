@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import Feedback from "./Feedback";
+import { Redirect } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pageAnimation, textAnimation } from "../animation";
+import { textAnimation } from "../animation";
 
 const Question = (props) => {
   const { number, question, image, answers, onClick, correct, last } = props;
@@ -23,7 +23,13 @@ const Question = (props) => {
   };
 
   return showFeedback ? (
-    <Feedback points={correctAnswers} total={number} />
+    <Redirect to={{
+      pathname: "/Feedback",
+      state: {
+        points: correctAnswers,
+        total: number
+        }
+    }}/>
   ) : (
     <Container className="question-page-container">
       <img className="question-img" src={image} alt="question" />
@@ -69,6 +75,7 @@ const Question = (props) => {
             onClick={() => {
               if (chosenId === correct) {
                 setCorrectAnswers(correctAnswers + 1);
+                setChosenId(0);
               }
               setNextClicked(true);
               setTimeout(function () {
