@@ -10,6 +10,7 @@ import {
   imgAnimation,
   finishAnimation,
 } from "../animation.js";
+
 const Feedback = (props) => {
   const { points, total } = props;
   const [image, setImage] = useState("");
@@ -32,39 +33,36 @@ const Feedback = (props) => {
           const allFeedback = response.data.data.allQuizzes[0].feedback;
           const [excellent, good, ok, bad, terrible] = allFeedback;
           if (isMounted) {
-          if (percentage === 0) {
-            setImage(terrible.image);
-            setDescription("You answered all the questions wrong...");
+            if (percentage === 0) {
+              setImage(terrible.image);
+              setDescription("You answered all the questions wrong...");
+            } else if (percentage > 0 && percentage < 20) {
+              setImage(terrible.image);
+              setDescription(terrible.description);
+            } else if (percentage >= 20 && percentage < 40) {
+              setImage(bad.image);
+              setDescription(bad.description);
+              setCss(`resized-bad`);
+            } else if (percentage >= 40 && percentage < 65) {
+              setImage(ok.image);
+              setDescription(ok.description);
+              setCss(`moved`);
+            } else if (percentage >= 65 && percentage < 90) {
+              setImage(good.image);
+              setDescription(good.description);
+            } else if (percentage >= 90 && percentage <= 100) {
+              setImage(excellent.image);
+              setDescription(excellent.description);
+              setCss(`resized-excellent`);
+            }
           }
-          else if (percentage > 0 && percentage < 20) {
-            setImage(terrible.image);
-            setDescription(terrible.description);
-          }
-          else if (percentage >= 20 && percentage < 40) {
-            setImage(bad.image);
-            setDescription(bad.description);
-            setCss(`resized-bad`);
-          }
-          else if (percentage >= 40 && percentage < 65) {
-            setImage(ok.image);
-            setDescription(ok.description);
-            setCss(`moved`);
-          }
-          else if (percentage >= 65 && percentage < 90) {
-            setImage(good.image);
-            setDescription(good.description);
-          }
-          else if (percentage >= 90 && percentage <= 100) {
-            setImage(excellent.image);
-            setDescription(excellent.description);
-            setCss(`resized-excellent`);
-          }
-        }
         })
         .catch((error) => console.error(`Error: ${error}`));
     };
     getFeedback();
-    return () => { isMounted = false };
+    return () => {
+      isMounted = false;
+    };
   }, [percentage]);
 
   const container = {
@@ -74,7 +72,6 @@ const Feedback = (props) => {
       transition: {
         duration: 0.75,
         ease: "easeOut",
-
         staggerChildren: 1,
       },
     },
@@ -86,7 +83,8 @@ const Feedback = (props) => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="feedback">
+        className="feedback"
+      >
         <Col as={motion.Col} className="feedback-img-column" sm={4}>
           <motion.img
             variants={imgAnimation}

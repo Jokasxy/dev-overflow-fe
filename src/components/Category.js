@@ -27,7 +27,7 @@ const Category = () => {
             </div>
           </motion.div>
         </Col>
-        <Col sm={6}>
+        <Col className="study-column" sm={6}>
           <motion.div
             variants={categoryFunAnimation}
             initial="hidden"

@@ -1,16 +1,15 @@
 .feedback {
   display: flex;
   flex-wrap: nowrap;
-  height: 660px;
+  height: 560px;
   justify-content: space-between;
-  margin-top: -155px;
-  background-color: #FCFCFF;
+
+  background-color: #fcfcff;
 }
 .feedback-img-column {
   img {
     height: 660px;
     object-fit: cover;
-    padding-bottom: 20px;
   }
   .resized-bad {
     transform: scale(0.8);
@@ -37,20 +36,23 @@
   .circle {
     background-color: rgba(93, 109, 255, 0.3);
     border-radius: 50%;
-    height: 121px;
-    width: 130px;
+    height: 131px;
+    width: 140px;
     align-items: center;
+    margin-top: 30px;
   }
   .percentage {
+    display: flex;
+    align-items: center;
     color: #5d6dff;
-    font-size: 89px;
+    font-size: 60px;
     font-weight: 500;
     text-align: center;
     align-self: center;
+    justify-content: center;
     height: 100px;
     width: 100px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 15px 0 0 20px;
     span {
       font-size: 49px;
       font-weight: 400;
@@ -70,7 +72,7 @@
   font-size: 30px;
   text-align: center;
   color: white;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   overflow: hidden;
   &:hover {
     background-color: #5967ff;
