@@ -172,3 +172,21 @@
   position: relative;
   z-index: 0;
 }
+
+.tooltip > .tooltip-inner {
+  font-size: 25px;
+  color:#0069d9;
+  border: 3px solid #0069d9;
+  background-color: white;
+  padding: '5px 10px';
+  border-radius: 3;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+
+.bs-tooltip-auto[x-placement^="top"] .arrow::before, .bs-tooltip-top .arrow::before{
+	border-top-color:#4251D1 ;
+}
+
+

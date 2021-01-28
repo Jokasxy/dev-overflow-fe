@@ -11,6 +11,8 @@ const Questions = (props) => {
   const [quizTitle, setQuizTitle] = useState("");
 
   useEffect(() => {
+    let isMounted = true;
+
     const getQuestions = async () => {
       const quizId = props.quizId;
       await axios
@@ -28,12 +30,17 @@ const Questions = (props) => {
           });
           const questionsData = data[0].questions;
           const title = data[0].name;
-          setQuestions(questionsData);
-          setQuizTitle(title);
+          if (isMounted) {
+            setQuestions(questionsData);
+            setQuizTitle(title);
+          }
         })
         .catch((error) => console.error(`Error: ${error}`));
     };
     getQuestions();
+    return () => {
+      isMounted = false;
+    };
   }, [questions, props.quizId]);
 
   const clicked = () => {
